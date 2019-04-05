@@ -24,7 +24,7 @@ var OpenloadDecoder = {
                 var parse2 = scriptP2Matches[0];
                 Log['\x64']('parse2' + parse2);
                 encode = encode.replace("PARSE2EXPRESSION",parse2);
-                var xxcodeRegex = /<p id=".+style="">(.+)<\/p>/g;
+                var xxcodeRegex = /<p style="" id=".+>(.+)<\/p>/g;
                 var xxcodeMatches = getMatches(O, xxcodeRegex, 1);
                 if(xxcodeMatches.length > 0) {
                     var xxxcodexxx = xxcodeMatches[0];
@@ -50,4 +50,3 @@ function getMatches(string, regex, index) {
     }
     return matches;
   }
-  
